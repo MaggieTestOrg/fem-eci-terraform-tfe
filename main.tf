@@ -15,15 +15,14 @@ module "workspace" {
   version  = "0.8.0"
 
   description       = each.value.description
-  execution_mode    = "local"
   name              = each.key
   organization_name = var.organization_name
   project_id        = each.value.project_id
-  # execution_mode    = each.value.execution_mode
+  execution_mode    = each.value.execution_mode
 
-  ## Making a 1:1 relationship between the workspace and the VCS repo
-  # vcs_repo = {
-  #   github_app_installation_id = data.tfe_github_app_installation.this.installation_id
-  #   identifier                 = each.value.vcs_repo_identifer
-  # }
+  # Making a 1:1 relationship between the workspace and the VCS repo
+  vcs_repo = {
+    github_app_installation_id = data.tfe_github_app_installation.this.id
+    identifier                 = each.value.vcs_repo_identifer
+  }
 }
