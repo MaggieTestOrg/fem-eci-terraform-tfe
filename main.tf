@@ -19,9 +19,11 @@ module "workspace" {
   name              = each.key
   organization_name = var.organization_name
   project_id        = each.value.project_id
-}
+  # execution_mode    = each.value.execution_mode
 
-moved {
-  from = module.workspace["fem-eci-workspace"]
-  to = module.workspace["fem-eci-tfe"]
+  ## Making a 1:1 relationship between the workspace and the VCS repo
+  # vcs_repo = {
+  #   github_app_installation_id = data.tfe_github_app_installation.this.installation_id
+  #   identifier                 = each.value.vcs_repo_identifer
+  # }
 }

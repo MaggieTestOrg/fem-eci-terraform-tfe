@@ -9,6 +9,7 @@ locals {
       description    = "Example description of workspace"
       execution_mode = "local"
       project_id     = module.project["fem-eci-project"].id
+      # vcs_repo_identifer = "MaggieTestOrg/fem-eci-terraform-tfe"
     }
   }
 }
