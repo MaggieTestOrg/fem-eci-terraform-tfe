@@ -15,7 +15,7 @@ locals {
       description        = "Workspace for github stuff"
       execution_mode     = "local"
       project_id         = module.project["fem-eci-project"].id
-      vcs_repo_identifer = "${var.github_organization_name}/fem-eci-terraform-tfe"
+      vcs_repo_identifer = "${var.github_organization_name}/fem-eci-terraform-github"
     }
   }
 }
