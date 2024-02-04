@@ -13,7 +13,7 @@ locals {
     }
     "fem-eci-github" = {
       description        = "Workspace for github stuff"
-      execution_mode     = "local"
+      execution_mode     = "remote"
       project_id         = module.project["fem-eci-project"].id
       vcs_repo_identifer = "${var.github_organization_name}/fem-eci-terraform-github"
     }
