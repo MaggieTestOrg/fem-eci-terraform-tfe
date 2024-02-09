@@ -6,16 +6,16 @@ locals {
   }
   workspace = {
     "fem-eci-tfe" = {
-      description        = "Workspace for terraform stuff"
-      execution_mode     = "remote"
-      project_id         = module.project["fem-eci-project"].id
-      vcs_repo_identifer = "${var.github_organization_name}/fem-eci-terraform-tfe"
+      description         = "Workspace for terraform stuff"
+      execution_mode      = "remote"
+      project_id          = module.project["fem-eci-project"].id
+      vcs_repo_identifier = "${var.github_organization_name}/fem-eci-terraform-tfe"
     }
     "fem-eci-github" = {
-      description        = "Workspace for github stuff"
-      execution_mode     = "remote"
-      project_id         = module.project["fem-eci-project"].id
-      vcs_repo_identifer = "${var.github_organization_name}/fem-eci-terraform-github"
+      description         = "Workspace for github stuff"
+      execution_mode      = "remote"
+      project_id          = module.project["fem-eci-project"].id
+      vcs_repo_identifier = "${var.github_organization_name}/fem-eci-terraform-github"
     }
 
     "fem-eci-aws-network" = {

@@ -24,6 +24,6 @@ module "workspace" {
   # Making a 1:1 relationship between the workspace and the VCS repo
   vcs_repo = {
     github_app_installation_id = data.tfe_github_app_installation.this.id
-    identifier                 = each.value.vcs_repo_identifer
+    identifier                 = each.value.vcs_repo_identifier
   }
 }
